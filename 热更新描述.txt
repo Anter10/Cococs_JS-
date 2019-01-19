@@ -1,0 +1,39 @@
+热更新要点:
+
+0: 本地热更新的配置(localproject.manifest)
+
+1: 远程更新配置信息.(project.manifest)
+
+2: 版本号地址.(version.manifest)
+
+3: 更新类型
+   zip类型（size 和 md5 可以不填写）: 
+   "res/import.zip":{
+        "size":33880,
+        "compressed":true
+    }
+    文件类型（size 和 md5 可以不填写）:
+    "src/cocos2d-jsb.js":{
+       "size":3341465,
+        "md5":"fafdde66bd0a81d1e096799fb8b7af95"
+    }
+
+4: 在 main.js 中加入搜索路径（可写路径） 
+    if (jsb) {
+        var hotUpdateSearchPaths = JSON.parse(localStorage.getItem('HotUpdateSearchPaths'));
+        if (hotUpdateSearchPaths) {
+            var _storagePath1 = (jsb.fileUtils ? jsb.fileUtils.getWritablePath() : '/');
+            jsb.fileUtils.setSearchPaths(hotUpdateSearchPaths);
+        }
+    }
+
+5: creator 版本库的js需要更新(打包出来的Resources)
+   jsp-adapter 压缩成zip
+   src目录下的:
+   cocos2d-jsb.js project.dev.js settings.js 都需要更新上去
+
+6: 更新完成后需要重新启动游戏。
+
+7: 热更新的代码(HotUpdate.js)
+
+8: 每次更新需要在测试环境下进行测试成功后 才能上线热更新。

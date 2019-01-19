@@ -1,0 +1,31 @@
+{
+    "packageUrl":"https://scgf.heisekeji.net/zskz/tutorial-hot-update/remote-assets/",
+    "remoteManifestUrl":"https://scgf.heisekeji.net/zskz/tutorial-hot-update/remote-assets/project.manifest",
+    "remoteVersionUrl":"https://scgf.heisekeji.net/zskz/tutorial-hot-update/remote-assets/version.manifest",
+    "version":"2.9",
+    "assets":{
+        "src/cocos2d-jsb.js":{
+            "size":3341465,
+            "md5":"fafdde66bd0a81d1e096799fb8b7af95"
+        },
+        "src/project.dev.js":{
+            "size":78686,
+            "md5":"164a9c99b9005b0627d22697e27d34dd"
+        },
+        "src/settings.js":{
+            "size":12022,
+            "md5":"0a13265c9b057b79dd097595f187dfe6"
+        },
+        "res/import.zip":{
+            "size":33880,
+            "compressed":true
+        },
+        "res/raw-assets.zip":{
+            "size":33880,
+            "compressed":true
+        },
+    },
+    "searchPaths":[
+
+    ]
+}
